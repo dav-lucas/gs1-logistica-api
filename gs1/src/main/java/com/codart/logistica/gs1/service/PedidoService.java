@@ -20,7 +20,7 @@ public class PedidoService {
     private UsuarioRepository usuarioRepository;
 
     public List<Pedido> listarTodos() {
-        return pedidoRepository.findAll()
+        return pedidoRepository.findAll();
     }
 
     public Pedido criarPedido(Pedido pedido, UUID usuarioId){
@@ -47,8 +47,8 @@ public class PedidoService {
         return pedidoRepository.save(pedido);
     }
 
-    public Pedido deletarPedido(UUID id) {
-        Pedido pedido = pedidoRepository.findById().orElse(null);
+    public void deletarPedido(UUID id) {
+        Pedido pedido = pedidoRepository.findById(id).orElse(null);
 
         if (pedido == null) {
             throw new IllegalArgumentException("Pedido não encontrado! Não foi possível deletar o pedido.");

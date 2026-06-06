@@ -1,5 +1,6 @@
 package com.codart.logistica.gs1.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,6 +23,7 @@ public class Rastreamento {
     private String tipoConexao;
     private LocalDateTime dataHoraLeitura;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "pedido_id", nullable = false)
     private Pedido pedido;

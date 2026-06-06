@@ -54,6 +54,10 @@ public class PedidoService {
             throw new IllegalArgumentException("Pedido não encontrado! Não foi possível deletar o pedido.");
         }
 
+        if ("EM_TRANSITO".equals(pedido.getStatus())) {
+            throw new IllegalArgumentException("Não é permitido deletar um pedido que está em trânsito!");
+        }
+
         pedidoRepository.delete(pedido);
     }
 }

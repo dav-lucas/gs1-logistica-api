@@ -1,6 +1,6 @@
 # Global Solutions FIAP - Sistema Integrado de Logística e Telemetria IoT
 
-![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java)
+![Java](https://img.shields.io/badge/Java-25-orange?style=for-the-badge&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen?style=for-the-badge&logo=springboot)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-v3-blue?style=for-the-badge&logo=openapi)
 ![Lombok](https://img.shields.io/badge/Lombok-Enabled-red?style=for-the-badge&logo=lombok)

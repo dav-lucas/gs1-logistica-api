@@ -3,6 +3,9 @@ package com.codart.logistica.gs1.controller;
 import com.codart.logistica.gs1.model.Usuario;
 import com.codart.logistica.gs1.repository.UsuarioRepository;
 import com.codart.logistica.gs1.service.JwtService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@Tag(name = "B. Autenticação", description = "Endpoints para login e geração de Token JWT")
 public class AuthController {
 
     @Autowired
@@ -23,6 +27,7 @@ public class AuthController {
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @PostMapping("/login")
+    @Operation(summary = "Realizar Login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         Usuario usuario = usuarioRepository.findByEmail(request.getEmail());
 
@@ -43,7 +48,9 @@ public class AuthController {
 }
 
 class LoginRequest {
+    @Schema(example = "exemplo@fiap.com")
     private String email;
+    @Schema(example = "senhaSegura123")
     private String senha;
 
     public String getEmail() { return email; }

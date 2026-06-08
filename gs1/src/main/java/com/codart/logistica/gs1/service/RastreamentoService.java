@@ -26,8 +26,14 @@ public class RastreamentoService {
             throw new IllegalArgumentException("Não é possível rastrear: Pedido não encontrado.");
         }
 
-        rastreamento.setPedido(pedido);
+        long totalRegistros = rastreamentoRepository.count();
 
+        long proximoVeiculo = totalRegistros + 1;
+
+        String veiculoIdGerado = String.format("VEI-%03d", proximoVeiculo);
+
+        rastreamento.setVeiculoId(veiculoIdGerado);
+        rastreamento.setPedido(pedido);
         rastreamento.setDataHoraLeitura(LocalDateTime.now());
 
         return rastreamentoRepository.save(rastreamento);

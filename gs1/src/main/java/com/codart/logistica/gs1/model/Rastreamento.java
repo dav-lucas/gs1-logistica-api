@@ -1,6 +1,7 @@
 package com.codart.logistica.gs1.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -18,6 +19,18 @@ public class Rastreamento {
     @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private UUID id;
 
+    @JsonProperty("veiculo_id")
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
+    private String veiculoId;
+
+    @JsonProperty("placa")
+    @Schema(example = "MNO-5P67")
+    private String placa;
+
+    @JsonProperty("temperatura")
+    @Schema(example = "22.3")
+    private double temperatura;
+
     @Schema(example = "-23.550520")
     private double latitude;
 
@@ -30,8 +43,9 @@ public class Rastreamento {
     @Schema(example = "75.0")
     private double nivelCombustivel;
 
-    @Schema(example = "5G")
-    private String tipoConexao;
+    @JsonProperty("status_conexao")
+    @Schema(example = "CONEXAO_SATELITE")
+    private String statusConexao;
 
     @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private LocalDateTime dataHoraLeitura;

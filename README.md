@@ -6,7 +6,7 @@ Este projeto foi desenvolvido como solução para a **Global Solutions da FIAP**
 
 ## 🔄 Fluxo Lógico Operacional (Ordem de Execução)
 
-A interface interativa do **Swagger UI** foi cirurgicamente projetada para contar a história do fluxo operacional de cima para baixo. Para realizar testes rápidos de ponta a ponta, siga esta exata ordem de execução:
+A interface interativa do **Swagger** foi cirurgicamente projetada para contar a história do fluxo operacional de cima para baixo. Para realizar testes rápidos de ponta a ponta, siga esta exata ordem de execução:
 
 ### 🧱 A. Cadastro de Usuários
 * Ponto inicial do ecossistema. Permite registrar os motoristas, operadores logísticos ou clientes.

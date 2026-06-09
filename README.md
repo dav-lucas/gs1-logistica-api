@@ -1,6 +1,6 @@
 # Global Solutions FIAP - Sistema Integrado de Logística e Telemetria IoT
 
-Este projeto foi desenvolvido como solução para a **Global Solutions da FIAP**. Trata-se de uma API REST robusta voltada para a gestão de cadeias de suprimentos, logística reversa/avançada e monitoramento de frotas através de dispositivos de rastreamento com sensores IoT embarcados.
+Este projeto foi desenvolvido como solução para a **Global Solutions da FIAP**. Trata-se de uma API REST voltada para a gestão de cadeias de suprimentos, logística reversa/avançada e monitoramento de frotas através de dispositivos de rastreamento com sensores IoT embarcados.
 
 ---
 
